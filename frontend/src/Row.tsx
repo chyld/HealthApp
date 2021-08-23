@@ -1,49 +1,28 @@
 import React from 'react';
+import { Log } from './interfaces';
 
-interface Props {
-    id: number;
-    date: string;
-    useBathroom: boolean;
-    lowCalorie: boolean;
-    didFast: boolean;
-    noJunk: boolean;
-    takeVitamins: boolean;
-    sleep8: boolean;
-    didMeditate: boolean;
-    caloriesOut: number;
-    totalDistance: number;
-    runDistance: number;
-    weights: number;
-    cardio: number;
-    yoga: number;
-    weight?: number;
-    comment?: string;
-    createdAt: string;
-}
-
-function Row(props: Props) {
+function Row(props: Log) {
     return (
-        <div>
-            <div>The Row</div>
-            <div>{props.id}</div>
-            <div>{props.date}</div>
-            <div>{props.useBathroom.toString()}</div>
-            <div>{props.lowCalorie.toString()}</div>
-            <div>{props.didFast.toString()}</div>
-            <div>{props.noJunk.toString()}</div>
-            <div>{props.takeVitamins.toString()}</div>
-            <div>{props.sleep8.toString()}</div>
-            <div>{props.didMeditate.toString()}</div>
-            <div>{props.caloriesOut}</div>
-            <div>{props.totalDistance}</div>
-            <div>{props.runDistance}</div>
-            <div>{props.weights}</div>
-            <div>{props.cardio}</div>
-            <div>{props.yoga}</div>
-            <div>{props.weight}</div>
-            <div>{props.comment}</div>
-            <div>{props.createdAt}</div>
-        </div>
+        <tr>
+            <td>{props.id}</td>
+            <td>{props.date}</td>
+            <td>{props.useBathroom.toString()}</td>
+            <td>{props.lowCalorie.toString()}</td>
+            <td>{props.didFast.toString()}</td>
+            <td>{props.noJunk.toString()}</td>
+            <td>{props.takeVitamins.toString()}</td>
+            <td>{props.sleep8.toString()}</td>
+            <td>{props.didMeditate.toString()}</td>
+            <td>{props.caloriesOut}</td>
+            <td>{props.totalDistance}</td>
+            <td>{props.runDistance}</td>
+            <td>{props.weights}</td>
+            <td>{props.cardio}</td>
+            <td>{props.yoga}</td>
+            <td>{props.weight}</td>
+            <td>{props.comment}</td>
+            <td>{props.createdAt}</td>
+        </tr>
     );
 }
 

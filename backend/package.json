@@ -14,7 +14,8 @@
         "semi": true,
         "singleQuote": true,
         "trailingComma": "all",
-        "tabWidth": 4
+        "tabWidth": 4,
+        "printWidth": 120
     },
     "dependencies": {
         "@prisma/client": "2.29.1",
