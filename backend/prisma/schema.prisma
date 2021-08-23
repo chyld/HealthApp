@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Log {
+  id            Int       @id @default(autoincrement())
+  date          DateTime  @default(now())
+
+  useBathroom   Boolean   @default(false)
+  lowCalorie    Boolean   @default(false)
+  didFast       Boolean   @default(false)
+  noJunk        Boolean   @default(false)
+  takeVitamins  Boolean   @default(false)
+  sleep8        Boolean   @default(false)
+  didMeditate   Boolean   @default(false)
+
+  caloriesOut   Int       @default(0)
+  totalDistance Float     @default(0)
+  runDistance   Float     @default(0)
+  weights       Int       @default(0)
+  cardio        Int       @default(0)
+  yoga          Int       @default(0)
+
+  weight        Float?
+  comment       String?
+  createdAt     DateTime  @default(now())
+}
