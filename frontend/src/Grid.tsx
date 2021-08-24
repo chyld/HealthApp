@@ -1,36 +1,13 @@
 import React from 'react';
-import { gql, useQuery } from '@apollo/client';
 import Row from './Row';
 import { LogArray } from './interfaces';
 
-function Grid() {
-    const LOGS_QUERY = gql`
-        query {
-            logs {
-                id
-                date
-                useBathroom
-                lowCalorie
-                didFast
-                noJunk
-                takeVitamins
-                sleep8
-                didMeditate
-                caloriesOut
-                totalDistance
-                runDistance
-                weights
-                cardio
-                yoga
-                weight
-                comment
-                createdAt
-            }
-        }
-    `;
+interface Props {
+    data: LogArray | undefined;
+    refetch: any;
+}
 
-    const { data } = useQuery<LogArray>(LOGS_QUERY);
-
+function Grid(props: Props) {
     return (
         <div>
             <table>
@@ -57,7 +34,7 @@ function Grid() {
                     </tr>
                 </thead>
                 <tbody>
-                    {data?.logs.map((log) => (
+                    {props.data?.logs.map((log) => (
                         <Row
                             key={log.id}
                             id={log.id}

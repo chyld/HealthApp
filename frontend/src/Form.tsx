@@ -1,9 +1,15 @@
 import React from 'react';
 
-function Form() {
+interface Props {
+    create: () => void;
+}
+
+function Form(props: Props) {
     return (
         <div>
             <div>The Form</div>
+            <input type="text"></input>
+            <button onClick={props.create}>Submit</button>
         </div>
     );
 }

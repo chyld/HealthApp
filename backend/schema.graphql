@@ -30,20 +30,8 @@ type Log {
 
 input LogCreateInput {
   caloriesOut: Int!
-  cardio: Int!
-  comment: String
-  didFast: Boolean!
-  didMeditate: Boolean!
-  lowCalorie: Boolean!
-  noJunk: Boolean!
-  runDistance: Float!
-  sleep8: Boolean!
-  takeVitamins: Boolean!
   totalDistance: Float!
   useBathroom: Boolean!
-  weight: Float
-  weights: Int!
-  yoga: Int!
 }
 
 type Mutation {

@@ -43,6 +43,7 @@ const Mutation = objectType({
                     data: {
                         useBathroom: args.data.useBathroom,
                         caloriesOut: args.data.caloriesOut,
+                        totalDistance: args.data.totalDistance,
                     },
                 });
             },
@@ -78,20 +79,8 @@ const LogCreateInput = inputObjectType({
     name: 'LogCreateInput',
     definition(t) {
         t.nonNull.boolean('useBathroom');
-        t.nonNull.boolean('lowCalorie');
-        t.nonNull.boolean('didFast');
-        t.nonNull.boolean('noJunk');
-        t.nonNull.boolean('takeVitamins');
-        t.nonNull.boolean('sleep8');
-        t.nonNull.boolean('didMeditate');
         t.nonNull.int('caloriesOut');
         t.nonNull.float('totalDistance');
-        t.nonNull.float('runDistance');
-        t.nonNull.int('weights');
-        t.nonNull.int('cardio');
-        t.nonNull.int('yoga');
-        t.float('weight');
-        t.string('comment');
     },
 });
 
